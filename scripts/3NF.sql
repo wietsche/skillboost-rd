@@ -34,7 +34,7 @@ CREATE TABLE product (
     product_name TEXT,
     department_id INTEGER,
     price REAL,
-    FOREIGN KEY (department_id) REFERENCES department(department_id)
+    FOREIGN KEY (department_id) REFERENCES department (department_id)
 );
 
 INSERT INTO product (sku, product_name, department_id, price) VALUES

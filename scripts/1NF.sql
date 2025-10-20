@@ -9,7 +9,9 @@ CREATE TABLE inventory (
     PRIMARY KEY (store_id, sku)
 );
 
-INSERT INTO inventory (store_id, sku, product_name, department, department_id, price, stock_count) VALUES
+INSERT INTO inventory (
+    store_id, sku, product_name, department, department_id, price, stock_count
+) VALUES
 (101, 'SKU001', 'Apple Juice', 'Grocery', 1, 2.99, 150),
 (101, 'SKU002', 'Bluetooth Speaker', 'Electronics', 2, 199.99, 20),
 (102, 'SKU003', 'T-Shirt', 'Clothing', 3, 29.99, 75),
