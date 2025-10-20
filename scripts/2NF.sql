@@ -18,7 +18,6 @@ INSERT INTO inventory (store_id, sku, stock_count) VALUES
 (102, 'SKU010', 90);
 
 
-
 CREATE TABLE product (
     sku TEXT PRIMARY KEY,
     product_name TEXT,

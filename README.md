@@ -1,3 +1,5 @@
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wietsche/skillboost-rd)
+
 # Tutorial on Database Normalization (1NF, 2NF, 3NF)
 
 ## Setup
