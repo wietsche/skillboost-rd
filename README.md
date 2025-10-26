@@ -158,35 +158,18 @@ A table is in 3NF if it meets the following criteria:
 
 
 
-
-
-| book_id | title                                | author                    |      genre      | year\_published |
-|--------:|:-------------------------------------|:--------------------------|:---------------:|---------------:|
-|       6 | 1984                                 | George Orwell             |    Dystopian    |           1949 |
-|       3 | The Great Gatsby                     | F. Scott Fitzgerald       |      Novel      |           1925 |
-|       9 | And Then There Were None             | Agatha Christie           |     Mystery     |           1939 |
-|       2 | Moby-Dick                            | Herman Melville           |    Adventure    |           1851 |
-|       8 | Murder on the Orient Express         | Agatha Christie           |     Mystery     |           1934 |
-|       1 | Pride and Prejudice                  | Jane Austen               |     Romance     |           1813 |
-|       4 | To Kill a Mockingbird                | Harper Lee                | Southern Gothic |           1960 |
-|      10 | The Mysterious Affair at Styles      | Agatha Christie           |     Mystery     |           1920 |
-|       5 | Don Quixote                          | Miguel de Cervantes       |     Satire      |           1605 |
-|       7 | Animal Farm                          | George Orwell             |     Satire      |           1945 |
-
-
-
-| book\_id | title                                 | author                    | country         | genre              | year\_published |
-|--------:|:--------------------------------------|:--------------------------|:---------------:|:------------------:|---------------:|
-| 6       | 1984                                  | George Orwell             | United Kingdom  | Dystopian          |           1949 |
-| 3       | The Great Gatsby                      | F. Scott Fitzgerald       | United States   | Novel              |           1925 |
-| 9       | And Then There Were None              | Agatha Christie           | United Kingdom  | Mystery            |           1939 |
-| 2       | Moby\-Dick                            | Herman Melville           | United States   | Adventure          |           1851 |
-| 8       | Murder on the Orient Express          | Agatha Christie           | United Kingdom  | Mystery            |           1934 |
-| 1       | Pride and Prejudice                   | Jane Austen               | United Kingdom  | Romance            |           1813 |
-| 4       | To Kill a Mockingbird                 | Harper Lee                | United States   | Southern Gothic    |           1960 |
-| 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  | Mystery            |           1920 |
-| 5       | Don Quixote                           | Miguel de Cervantes       | Spain           | Satire             |           1605 |
-| 7       | Animal Farm                           | George Orwell             | United Kingdom  | Political Satire   |           1945 |
+| book\_id | title                                 | author                    | country         |      genre      | year\_published |
+|--------:|:--------------------------------------|:--------------------------|:---------------:|:---------------:|---------------:|
+| 6       | 1984                                  | George Orwell             | United Kingdom  |    Dystopian    |           1949 |
+| 3       | The Great Gatsby                      | F. Scott Fitzgerald       | United States   |      Novel      |           1925 |
+| 9       | And Then There Were None              | Agatha Christie           | United Kingdom  |     Mystery     |           1939 |
+| 2       | Moby\-Dick                            | Herman Melville           | United States   |    Adventure    |           1851 |
+| 8       | Murder on the Orient Express          | Agatha Christie           | United Kingdom  |     Mystery     |           1934 |
+| 1       | Pride and Prejudice                   | Jane Austen               | United Kingdom  |     Romance     |           1813 |
+| 4       | To Kill a Mockingbird                 | Harper Lee                | United States   | Southern Gothic |           1960 |
+| 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  |     Mystery     |           1920 |
+| 5       | Don Quixote                           | Miguel de Cervantes       | Spain           |     Satire      |           1605 |
+| 7       | Animal Farm                           | George Orwell             | United Kingdom  |     Satire      |           1945 |
 
 
 Authors
