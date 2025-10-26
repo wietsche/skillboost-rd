@@ -46,6 +46,13 @@ Answer:
 
 ### Exercise 2
 
+- Is the table `inventory2` from pervious exercise 3NF?
+- How would you improve on the model?
+
+
+
+
+
 
 
 
