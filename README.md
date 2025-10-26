@@ -1,6 +1,42 @@
+
+## Setup 
+
+Launch your codespace:
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wietsche/skillboost-rd)
 
-# Tutorial on Database Normalization (1NF, 2NF, 3NF)
+## SQLlite
+
+Ways of running queries
+
+1. Shell
+```bash
+sqlite3 mydb.db "SELECT date('now');"
+```
+
+2. REPL
+```bash
+sqlite3 mydb.db
+SELECT date('now');
+.q
+```
+
+3. File input
+```bash
+sqlite3 mydb.db < scripts/scratch.sql
+```
+
+4. GUI
+
+
+
+
+
+
+
+
+
+
+
 
 ## Setup
 
