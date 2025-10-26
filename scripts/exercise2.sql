@@ -26,5 +26,6 @@ FROM product;
 
 .headers on
 .mode column
-SELECT * FROM department;
+SELECT * FROM inventory2;
 SELECT * FROM product2;
+SELECT * FROM department;

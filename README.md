@@ -1,87 +1,91 @@
 
 ## Setup 
 
-Launch your codespace:
+### Launch your codespace
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/wietsche/skillboost-rd)
 
-## SQLlite
-
-Ways of running queries
-
-1. Shell
-```bash
-sqlite3 mydb.db "SELECT date('now');"
-```
-
-2. REPL
-```bash
-sqlite3 mydb.db
-SELECT date('now');
-.q
-```
-
-3. File input
-```bash
-sqlite3 mydb.db < scripts/scratch.sql
-```
-
-4. GUI
-
-## Tuturial
-
-### Exercise 1
-
-```
- sqlite3 mydb.db < scripts/Q1.sql
- sqlite3 mydb.db -header -column "SELECT * FROM inventory"
-```
-Questions:
-- Is this in 1NF?
-- How would you improve the data model? 
-
-Answer:
-```
- sqlite3 mydb.db < scripts/A1.sql
-```
-
-### Exercise 2
-
-- Is the table `inventory2` from pervious exercise 3NF?
-- How would you improve on the model?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Setup
-
-### clone repo
+or
+### DIY
 ```bash
 mkdir ~/skillsboost
 cd ~/skillsboost
 git clone git@github.com:wietsche/skillsboost-rd.git
 ```
 
-### install sqlite3
 ```bash
 brew install sqlite3
 ```
-or manual
+or
 ```bash
 cd ~/skillsboost
 wget https://www.sqlite.org/2025/sqlite-tools-osx-arm64-3500400.zip
 unzip sqlite-tools-osx-arm64-3500400.zip
 ```
+
+
+## SQLlite
+
+Ways of running queries
+
+### 1. Shell
+```bash
+sqlite3 mydb.db "SELECT date('now');"
+```
+
+### 2. REPL
+```bash
+sqlite3 mydb.db
+SELECT date('now');
+.q
+```
+
+### 3. File input
+```bash
+sqlite3 mydb.db < scripts/scratch.sql
+```
+
+### 4. GUI
+
+## Exercises
+
+### Exercise 1
+
+```
+ sqlite3 mydb.db < scripts/inventory.sql
+ sqlite3 mydb.db -header -column "SELECT * FROM inventory"
+```
+Questions:
+- Is this in 1NF?
+   - Uniqueness: Each row is unique?
+   - Atomicity: Each cell contains only atomic (indivisible) values?
+- How would you improve the data model? 
+Answer:
+```
+ sqlite3 mydb.db < scripts/exercise1.sql
+```
+Test for 2NF:
+* It is already in 1NF.
+* Are there partial dependencies?
+
+
+### Exercise 2
+
+- Is the table `inventory2` from pervious exercise 3NF?
+- How would you improve on the model?
+
+Answer:
+```
+ sqlite3 mydb.db < scripts/exercise2.sql
+```
+Test for 3NF:
+ * It is in 2NF
+ * Are there trasnitive dependencies?
+
+
+
+## Setup
+
+
 
 ## Normal forms
 
