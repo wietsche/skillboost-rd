@@ -1,3 +1,5 @@
+-- Create the inventory table
+
 CREATE TABLE inventory (
     store_id INTEGER,
     sku TEXT,
@@ -22,3 +24,9 @@ INSERT INTO inventory (
 (103, 'SKU008', 'Cereal', 'Grocery', 1, 3.49, 120),
 (104, 'SKU009', 'Vitamin C', 'Pharmacy', 4, 14.99, 30),
 (102, 'SKU010', 'Socks', 'Clothing', 3, 19.99, 90);
+<<<<<<< HEAD:scripts/1NF.sql
+=======
+
+ -- What is the normal form of this table?
+ -- How can you improve it?
+>>>>>>> 2bf7cbe (updates):scripts/Q1.sql
