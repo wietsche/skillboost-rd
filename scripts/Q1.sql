@@ -1,5 +1,5 @@
 -- Create the inventory table
-
+DROP TABLE IF EXISTS inventory;
 CREATE TABLE inventory (
     store_id INTEGER,
     sku TEXT,

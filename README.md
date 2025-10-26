@@ -27,6 +27,24 @@ sqlite3 mydb.db < scripts/scratch.sql
 
 4. GUI
 
+## Tuturial
+
+### Exercise 1
+
+```
+ sqlite3 mydb.db < scripts/Q1.sql
+ sqlite3 mydb.db -header -column "SELECT * FROM inventory"
+```
+Questions:
+- Is this in 1NF?
+- How would you improve the data model? 
+
+Answer:
+```
+ sqlite3 mydb.db < scripts/A1.sql
+```
+
+### Exercise 2
 
 
 
