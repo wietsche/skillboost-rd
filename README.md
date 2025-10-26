@@ -81,7 +81,12 @@ Test for 3NF:
  * It is in 2NF
  * Are there trasnitive dependencies?
 
+### Exercise 3
 
+Insert data into the normalized tables from exercise 2.
+```bash
+python generate.py
+```
 
 ## Setup
 

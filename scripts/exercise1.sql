@@ -1,17 +1,16 @@
 --Drop if exists
-DROP TABLE IF EXISTS inventory2;
+DROP TABLE IF EXISTS inventory;
 DROP TABLE IF EXISTS product;
 
 
-CREATE TABLE inventory2 (
-    store_id INTEGER,
+CREATE TABLE inventory (
+    store_id INTEGER PRIMARY KEY,
     sku TEXT,
-    stock_count INTEGER,
-    PRIMARY KEY (store_id, sku)
+    stock_count INTEGER
 );
 
 
-CREATE TABLE product (
+CREATE TABLE product_and_department (
     sku TEXT PRIMARY KEY,
     product_name TEXT,
     department TEXT,
@@ -21,18 +20,19 @@ CREATE TABLE product (
 
 
 -- Populate product with distinct product info from legacy inventory table
-INSERT OR IGNORE INTO product (sku, product_name, department, department_id, price)
+INSERT INTO product_and_department (sku, product_name, department, department_id, price)
 SELECT DISTINCT sku, product_name, department, department_id, price
-FROM inventory;
+FROM product_inventory;
 
 -- Populate inventory_2nf with store-level stock counts
-INSERT OR REPLACE INTO inventory2 (store_id, sku, stock_count)
+INSERT OR REPLACE INTO inventory (store_id, sku, stock_count)
 SELECT store_id, sku, stock_count
-FROM inventory;
+FROM product_inventory;
 
 -- Verify the new tables
 -- set ouput format to columns
 .headers on
 .mode column
-SELECT * FROM product;
-SELECT * FROM inventory2;
+--.timer on
+SELECT * FROM product_and_department;
+SELECT * FROM inventory;

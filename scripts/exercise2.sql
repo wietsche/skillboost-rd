@@ -1,13 +1,12 @@
 -- Drop tables if they exist
-DROP TABLE IF EXISTS product2;
+DROP TABLE IF EXISTS product;
 DROP TABLE IF EXISTS department;
 
-CREATE TABLE product2 (
+CREATE TABLE product (
     sku TEXT PRIMARY KEY,
     product_name TEXT,
     department_id INTEGER,
-    price REAL,
-    FOREIGN KEY (department_id) REFERENCES department (department_id)
+    price REAL
 );
 
 CREATE TABLE department (
@@ -15,17 +14,17 @@ CREATE TABLE department (
     department TEXT
 );
 
--- select from original produc ttable into product2 an department table
+-- select from original product ttable into product2 an department table
 INSERT INTO department (department_id, department)
 SELECT DISTINCT department_id, department
-FROM product;
+FROM product_and_department;
 
-INSERT INTO product2 (sku, product_name, department_id, price)
+INSERT INTO product (sku, product_name, department_id, price)
 SELECT sku, product_name, department_id, price
-FROM product;
+FROM product_and_department;
 
 .headers on
 .mode column
-SELECT * FROM inventory2;
-SELECT * FROM product2;
+SELECT * FROM inventory;
+SELECT * FROM product;
 SELECT * FROM department;

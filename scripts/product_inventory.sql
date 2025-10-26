@@ -1,6 +1,6 @@
--- Create the inventory table
-DROP TABLE IF EXISTS inventory;
-CREATE TABLE inventory (
+-- Create the product_inventory table
+DROP TABLE IF EXISTS product_inventory;
+CREATE TABLE product_inventory (
     store_id INTEGER,
     sku TEXT,
     product_name TEXT,
@@ -11,7 +11,7 @@ CREATE TABLE inventory (
     PRIMARY KEY (store_id, sku)
 );
 
-INSERT INTO inventory (
+INSERT INTO product_inventory (
     store_id, sku, product_name, department, department_id, price, stock_count
 ) VALUES
 (101, 'SKU001', 'Apple Juice', 'Grocery', 1, 2.99, 150),
