@@ -229,7 +229,7 @@ def main():
     added_inventory = insert_inventory(engine)
 
     print(f"{datetime.now(timezone.utc).isoformat()} Seed complete.")
-    print(f"Departments: {len(dept_ids)} total \(ensured\).")
+    print(f"Departments: {len(dept_ids)} total (ensured).")
     print(f"Products inserted: {added_products}.")
     print(f"Inventory rows inserted: {added_inventory}.")
     print(f"DB: {db_url}")

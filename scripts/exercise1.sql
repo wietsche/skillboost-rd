@@ -1,6 +1,6 @@
 --Drop if exists
 DROP TABLE IF EXISTS inventory;
-DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS product_and_department;
 
 
 CREATE TABLE inventory (
@@ -34,5 +34,5 @@ FROM product_inventory;
 .headers on
 .mode column
 --.timer on
-SELECT * FROM product_and_department;
-SELECT * FROM inventory;
+SELECT * FROM product_and_department LIMIT 10;
+SELECT * FROM inventory LIMIT 10;
