@@ -51,8 +51,8 @@ sqlite3 mydb.db < scripts/scratch.sql
 ### Exercise 1
 
 ```
- sqlite3 mydb.db < scripts/inventory.sql
- sqlite3 mydb.db -header -column "SELECT * FROM inventory"
+ sqlite3 mydb.db < scripts/setup.sql
+ sqlite3 mydb.db -header -column "SELECT * FROM product_inventory;"
 ```
 Questions:
 - Is this in 1NF?
@@ -70,7 +70,7 @@ Test for 2NF:
 
 ### Exercise 2
 
-- Is the table `inventory2` from pervious exercise 3NF?
+- Is the table `inventory` from pervious exercise 3NF?
 - How would you improve on the model?
 
 Answer:

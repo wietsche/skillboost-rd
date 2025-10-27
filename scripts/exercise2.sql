@@ -25,6 +25,6 @@ FROM product_and_department;
 
 .headers on
 .mode column
-SELECT * FROM inventory;
-SELECT * FROM product;
-SELECT * FROM department;
+SELECT * FROM inventory LIMIT 10;
+SELECT * FROM product LIMIT 10;
+SELECT * FROM department LIMIT 10;
