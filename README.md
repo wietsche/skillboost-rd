@@ -157,7 +157,21 @@ A table is in 3NF if it meets the following criteria:
 2. No transitive dependencies: There are no transitive dependencies between non-key attributes. This means that non-key attributes should not depend on other non-key attributes. Every non-key attribute must depend only on the primary key.
 
 
+```markdown
+| book\_id | title                                 | author                    | country         |      genre      | year\_published |
+|--------:|:--------------------------------------|:--------------------------|:---------------:|:---------------:|---------------:|
+| 1       | Pride and Prejudice                   | Jane Austen               | United Kingdom  |     Romance     |           1813 |
+| 2       | Moby\-Dick                            | Herman Melville           | United States   |    Adventure    |           1851 |
+| 3       | The Great Gatsby                      | F. Scott Fitzgerald       | United States   |      Novel      |           1925 |
+| 4       | To Kill a Mockingbird                 | Harper Lee                | United States   | Southern Gothic |           1960 |
+| 5       | Don Quixote                           | Miguel de Cervantes       | Spain           |     Satire      |           1605 |
+| 6       | 1984                                  | George Orwell             | United Kingdom  |    Dystopian    |           1949 |
+| 7       | Animal Farm                           | George Orwell             | United Kingdom  |     Satire      |           1945 |
+| 8       | Murder on the Orient Express          | Agatha Christie           | United Kingdom  |     Mystery     |           1934 |
+| 9       | And Then There Were None              | Agatha Christie           | United Kingdom  |     Mystery     |           1939 |
+| 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  |     Mystery     |           1920 |
 
+<<<<<<< HEAD
 | book\_id | title                                 | author                    | country         |      genre      | year\_published |
 |--------:|:--------------------------------------|:--------------------------|:---------------:|:---------------:|---------------:|
 | 6       | 1984                                  | George Orwell             | United Kingdom  |    Dystopian    |           1949 |
@@ -170,6 +184,33 @@ A table is in 3NF if it meets the following criteria:
 | 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  |     Mystery     |           1920 |
 | 5       | Don Quixote                           | Miguel de Cervantes       | Spain           |     Satire      |           1605 |
 | 7       | Animal Farm                           | George Orwell             | United Kingdom  |     Satire      |           1945 |
+=======
+
+| book\_id | title                                 | author\_id |      genre      | year\_published |
+|--------:|:--------------------------------------|----------:|:---------------:|---------------:|
+| 1       | Pride and Prejudice                   | 5         |     Romance     |           1813 |
+| 2       | Moby\-Dick                            | 4         |    Adventure    |           1851 |
+| 3       | The Great Gatsby                      | 2         |      Novel      |           1925 |
+| 4       | To Kill a Mockingbird                 | 6         | Southern Gothic |           1960 |
+| 5       | Don Quixote                           | 7         |     Satire      |           1605 |
+| 6       | 1984                                  | 1         |    Dystopian    |           1949 |
+| 7       | Animal Farm                           | 1         |     Satire      |           1945 |
+| 8       | Murder on the Orient Express          | 3         |     Mystery     |           1934 |
+| 9       | And Then There Were None              | 3         |     Mystery     |           1939 |
+| 10      | The Mysterious Affair at Styles       | 3         |     Mystery     |           1920 |
+```
+Authors
+
+| author\_id | name                   | country        |
+|-----------:|:-----------------------|:---------------|
+| 1          | George Orwell          | United Kingdom |
+| 2          | F. Scott Fitzgerald    | United States  |
+| 3          | Agatha Christie        | United Kingdom |
+| 4          | Herman Melville        | United States  |
+| 5          | Jane Austen            | United Kingdom |
+| 6          | Harper Lee             | United States  |
+| 7          | Miguel de Cervantes    | Spain          |
+>>>>>>> 58207b9 (seed data)
 
 
 Authors
