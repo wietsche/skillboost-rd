@@ -58,7 +58,7 @@ Use any SQLite GUI of your choice.
 ## Exercises
 
 ### Exercise 1
-Load the initial dataset and inspect a denormalized table:
+Load the initial dataset and inspect `product_inventory` table:
     
     sqlite3 my.db < scripts/setup.sql
     sqlite3 my.db -header -column "SELECT * FROM product_inventory;"
@@ -74,8 +74,8 @@ Apply suggested improvements:
     sqlite3 my.db < scripts/exercise1.sql
 
 Test for 2NF:
-- It is already in 1NF.
-- No partial dependencies on key
+- Tables in 1NF?
+- No partial dependencies on key candidates?
 
 ### Exercise 2
 Evaluate 3NF on the `inventory` table and improve the model:
@@ -83,8 +83,8 @@ Evaluate 3NF on the `inventory` table and improve the model:
     sqlite3 my.db < scripts/exercise2.sql
 
 Test for 3NF:
-- It is in 2NF
-- No transitive dependencies
+- It is in 2NF?
+- No transitive dependencies?
 
 ### Exercise 3
 Generate sample data into the normalized schema using Python:
@@ -92,7 +92,14 @@ Generate sample data into the normalized schema using Python:
     # Uses DATABASE_URL if set, defaults to sqlite:///my.db
     python seed.py
 
-## Sample triggers and transactions
+Run the script and inspect output:
+
+    sqlite3 my.db < scripts/exercise.sql
+
+Open the exercise3.sql and add an index. Run file again and compare query plans before and after.
+
+### Exercise 4
+Sample triggers and transactions
 
 Create a sample table, backup table, and a delete trigger:
     
