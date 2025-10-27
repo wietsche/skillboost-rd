@@ -157,7 +157,7 @@ A table is in 3NF if it meets the following criteria:
 2. No transitive dependencies: There are no transitive dependencies between non-key attributes. This means that non-key attributes should not depend on other non-key attributes. Every non-key attribute must depend only on the primary key.
 
 
-```markdown
+
 | book\_id | title                                 | author                    | country         |      genre      | year\_published |
 |--------:|:--------------------------------------|:--------------------------|:---------------:|:---------------:|---------------:|
 | 1       | Pride and Prejudice                   | Jane Austen               | United Kingdom  |     Romance     |           1813 |
@@ -171,7 +171,7 @@ A table is in 3NF if it meets the following criteria:
 | 9       | And Then There Were None              | Agatha Christie           | United Kingdom  |     Mystery     |           1939 |
 | 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  |     Mystery     |           1920 |
 
-<<<<<<< HEAD
+
 | book\_id | title                                 | author                    | country         |      genre      | year\_published |
 |--------:|:--------------------------------------|:--------------------------|:---------------:|:---------------:|---------------:|
 | 6       | 1984                                  | George Orwell             | United Kingdom  |    Dystopian    |           1949 |
@@ -184,7 +184,7 @@ A table is in 3NF if it meets the following criteria:
 | 10      | The Mysterious Affair at Styles       | Agatha Christie           | United Kingdom  |     Mystery     |           1920 |
 | 5       | Don Quixote                           | Miguel de Cervantes       | Spain           |     Satire      |           1605 |
 | 7       | Animal Farm                           | George Orwell             | United Kingdom  |     Satire      |           1945 |
-=======
+
 
 | book\_id | title                                 | author\_id |      genre      | year\_published |
 |--------:|:--------------------------------------|----------:|:---------------:|---------------:|
@@ -198,7 +198,7 @@ A table is in 3NF if it meets the following criteria:
 | 8       | Murder on the Orient Express          | 3         |     Mystery     |           1934 |
 | 9       | And Then There Were None              | 3         |     Mystery     |           1939 |
 | 10      | The Mysterious Affair at Styles       | 3         |     Mystery     |           1920 |
-```
+
 Authors
 
 | author\_id | name                   | country        |
@@ -210,7 +210,7 @@ Authors
 | 5          | Jane Austen            | United Kingdom |
 | 6          | Harper Lee             | United States  |
 | 7          | Miguel de Cervantes    | Spain          |
->>>>>>> 58207b9 (seed data)
+
 
 
 Authors
