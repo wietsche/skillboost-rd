@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS product_and_department;
 
 
 CREATE TABLE inventory (
-    store_id INTEGER PRIMARY KEY,
+    store_id,
     sku TEXT,
     stock_count INTEGER,
     PRIMARY KEY (store_id, sku)
