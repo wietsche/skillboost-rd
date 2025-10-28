@@ -94,20 +94,14 @@ Generate sample data into the normalized schema using Python:
 
 Run the script and inspect output:
 
-    sqlite3 my.db < scripts/exercise.sql
+    sqlite3 my.db < scripts/exercise3.sql
 
 Open the exercise3.sql and add an index. Run file again and compare query plans before and after.
 
 ### Exercise 4
-Sample triggers and transactions
-
 Create a sample table, backup table, and a delete trigger:
     
-    sqlite3 my.db < scripts/trigger.sql
-
-Run a delete inside a transaction to ensure atomicity:
-    
-    sqlite3 my.db < scripts/examples.sql
+    sqlite3 my.db < scripts/exercise4.sql
 
 ## Notes
 

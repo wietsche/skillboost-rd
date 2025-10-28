@@ -4,9 +4,10 @@ DROP TABLE IF EXISTS product_and_department;
 
 
 CREATE TABLE inventory (
-    store_id INTEGER PRIMARY KEY,
+    store_id,
     sku TEXT,
-    stock_count INTEGER
+    stock_count INTEGER,
+    PRIMARY KEY (store_id, sku)
 );
 
 
@@ -14,18 +15,18 @@ CREATE TABLE product_and_department (
     sku TEXT PRIMARY KEY,
     product_name TEXT,
     department TEXT,
-    department_id INTEGER,
+    dept_manager TEXT,
     price REAL
 );
 
 
 -- Populate product with distinct product info from legacy inventory table
-INSERT INTO product_and_department (sku, product_name, department, department_id, price)
-SELECT DISTINCT sku, product_name, department, department_id, price
+INSERT INTO product_and_department (sku, product_name, department, dept_manager, price)
+SELECT DISTINCT sku, product_name, department, dept_manager, price
 FROM product_inventory;
 
 -- Populate inventory_2nf with store-level stock counts
-INSERT OR REPLACE INTO inventory (store_id, sku, stock_count)
+INSERT INTO inventory (store_id, sku, stock_count)
 SELECT store_id, sku, stock_count
 FROM product_inventory;
 
