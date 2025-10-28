@@ -15,14 +15,13 @@ CREATE TABLE product_and_department (
     sku TEXT PRIMARY KEY,
     product_name TEXT,
     department TEXT,
-    department_id INTEGER,
     price REAL
 );
 
 
 -- Populate product with distinct product info from legacy inventory table
-INSERT INTO product_and_department (sku, product_name, department, department_id, price)
-SELECT DISTINCT sku, product_name, department, department_id, price
+INSERT INTO product_and_department (sku, product_name, department, price)
+SELECT DISTINCT sku, product_name, department, price
 FROM product_inventory;
 
 -- Populate inventory_2nf with store-level stock counts
