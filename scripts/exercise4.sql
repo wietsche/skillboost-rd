@@ -33,7 +33,7 @@ AFTER DELETE ON sample
 FOR EACH ROW
 BEGIN
   INSERT INTO sample_backup (id, code, created_at, deleted_at)
-  VALUES (OLD.id, OLD.code, OLD.number, OLD.created_at, CURRENT_TIMESTAMP);
+  VALUES (OLD.id, OLD.code, OLD.created_at, CURRENT_TIMESTAMP);
 END;
 
 -- Create sample_backup table
