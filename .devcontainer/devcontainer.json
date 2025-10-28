@@ -9,6 +9,9 @@
 		"ghcr.io/devcontainers-extra/features/sqlfluff:1": {}
 	},
 
+	"postCreateCommand": "python -m venv .venv && . .venv/bin/activate && python -m pip install --upgrade pip && if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi",
+
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
