@@ -15,13 +15,22 @@ CREATE TABLE product_and_department (
     sku TEXT PRIMARY KEY,
     product_name TEXT,
     department TEXT,
+<<<<<<< HEAD
+=======
+    dept_manager TEXT,
+>>>>>>> f52b021 (feedback and pip install)
     price REAL
 );
 
 
 -- Populate product with distinct product info from legacy inventory table
+<<<<<<< HEAD
 INSERT INTO product_and_department (sku, product_name, department, price)
 SELECT DISTINCT sku, product_name, department, price
+=======
+INSERT INTO product_and_department (sku, product_name, department, dept_manager, price)
+SELECT DISTINCT sku, product_name, department, dept_manager, price
+>>>>>>> f52b021 (feedback and pip install)
 FROM product_inventory;
 
 -- Populate inventory_2nf with store-level stock counts
