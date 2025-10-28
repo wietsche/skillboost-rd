@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS product_and_department;
 CREATE TABLE inventory (
     store_id INTEGER PRIMARY KEY,
     sku TEXT,
-    stock_count INTEGER
+    stock_count INTEGER,
+    PRIMARY KEY (store_id, sku)
 );
 
 
@@ -25,7 +26,7 @@ SELECT DISTINCT sku, product_name, department, department_id, price
 FROM product_inventory;
 
 -- Populate inventory_2nf with store-level stock counts
-INSERT OR REPLACE INTO inventory (store_id, sku, stock_count)
+INSERT INTO inventory (store_id, sku, stock_count)
 SELECT store_id, sku, stock_count
 FROM product_inventory;
 
